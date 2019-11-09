@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickPage" customModule="BillNote" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="zq9-ts-PEQ" id="mNE-DO-W3W"/>
+                <outlet property="baseView" destination="IYi-9j-5zj" id="HHK-fs-n43"/>
+                <outlet property="constraint" destination="qP3-Id-M60" id="X3t-d9-hfD"/>
+                <outlet property="pickView" destination="rM9-ox-Etz" id="V2g-9l-aID"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zq9-ts-PEQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ7-Ta-hlQ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <connections>
+                                <action selector="dismissAction:" destination="-1" eventType="touchUpInside" id="M14-ib-0nB"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-9j-5zj">
+                            <rect key="frame" x="0.0" y="667" width="375" height="216"/>
+                            <subviews>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rM9-ox-Etz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="xVy-mF-mr8"/>
+                                        <outlet property="delegate" destination="-1" id="oKJ-HZ-Kkc"/>
+                                    </connections>
+                                </pickerView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st6-wn-O2S">
+                                    <rect key="frame" x="0.0" y="172" width="375" height="44"/>
+                                    <color key="backgroundColor" red="0.0" green="0.4823529412" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="确定">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sureButtonAction:" destination="-1" eventType="touchUpInside" id="gpZ-EE-aJU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="216" id="5Dx-2f-unW"/>
+                                <constraint firstAttribute="bottom" secondItem="rM9-ox-Etz" secondAttribute="bottom" constant="44" id="6j1-Ck-sko"/>
+                                <constraint firstItem="rM9-ox-Etz" firstAttribute="leading" secondItem="IYi-9j-5zj" secondAttribute="leading" id="7aO-yv-YSH"/>
+                                <constraint firstAttribute="trailing" secondItem="rM9-ox-Etz" secondAttribute="trailing" id="C3L-56-pe7"/>
+                                <constraint firstAttribute="trailing" secondItem="st6-wn-O2S" secondAttribute="trailing" id="DAu-75-blN"/>
+                                <constraint firstItem="rM9-ox-Etz" firstAttribute="top" secondItem="IYi-9j-5zj" secondAttribute="top" id="Pjh-7X-n8O"/>
+                                <constraint firstItem="st6-wn-O2S" firstAttribute="leading" secondItem="IYi-9j-5zj" secondAttribute="leading" id="ag0-Tv-kKO"/>
+                                <constraint firstItem="st6-wn-O2S" firstAttribute="top" secondItem="rM9-ox-Etz" secondAttribute="bottom" id="std-IW-cdh"/>
+                                <constraint firstAttribute="bottom" secondItem="st6-wn-O2S" secondAttribute="bottom" id="u1o-yR-2vd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="QJ7-Ta-hlQ" firstAttribute="top" secondItem="zq9-ts-PEQ" secondAttribute="top" id="7op-Rw-FKq"/>
+                        <constraint firstAttribute="trailing" secondItem="IYi-9j-5zj" secondAttribute="trailing" id="k1m-8m-PKR"/>
+                        <constraint firstAttribute="trailing" secondItem="QJ7-Ta-hlQ" secondAttribute="trailing" id="mA4-ih-mv4"/>
+                        <constraint firstItem="IYi-9j-5zj" firstAttribute="leading" secondItem="zq9-ts-PEQ" secondAttribute="leading" id="oTv-hQ-FZ5"/>
+                        <constraint firstItem="QJ7-Ta-hlQ" firstAttribute="leading" secondItem="zq9-ts-PEQ" secondAttribute="leading" id="oj6-Gi-VNb"/>
+                        <constraint firstAttribute="bottom" secondItem="IYi-9j-5zj" secondAttribute="bottom" constant="-216" id="qP3-Id-M60"/>
+                        <constraint firstAttribute="bottom" secondItem="QJ7-Ta-hlQ" secondAttribute="bottom" id="yc2-6q-zCq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zq9-ts-PEQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5r7-Po-dHs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zq9-ts-PEQ" secondAttribute="trailing" id="OWp-wb-bHD"/>
+                <constraint firstItem="zq9-ts-PEQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YtW-aC-oO0"/>
+                <constraint firstItem="zq9-ts-PEQ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gyi-hc-O8p"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+        <pickerView contentMode="scaleToFill" id="PMC-WP-sG4">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="61" y="451"/>
+        </pickerView>
+    </objects>
+</document>
